@@ -24,7 +24,6 @@ $("#find-gif").on("click", function(event) {
     event.preventDefault();
     var userGif = $("#gif-input").val().trim();
     topics.push(userGif);
-    console.log(topics);
     btnCreate();
     clickEvent();
  });
@@ -45,13 +44,11 @@ $(".topic-button").on("click",function(){
                     btnClick(); 
             });
 });
-}
-                      
+}                  
 //on click function
 function btnClick(){
     console.log("is running");
     $(".gif").on("click",function(){
-        console.log("clicks");
         var index = $(this).attr("data-index");
         if (isStill[index]=== true){
             //change to moving
